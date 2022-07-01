@@ -1,4 +1,9 @@
 defmodule FrontendChallengeWeb.Components.Separator do
+  
+  @moduledoc """
+    This module renders a separator to represent depth levels in a Hierachy tree.
+  """
+
   use Surface.Component
 
   prop length, :integer, default: 0
@@ -7,7 +12,7 @@ defmodule FrontendChallengeWeb.Components.Separator do
     ~F"""
     {#if @length >= 0}
       {#for _ <- 0..@length}
-        <span class="depth_block" style="display: block;" />
+        <span class="depth_block"/>
       {/for}
     {/if}
     """

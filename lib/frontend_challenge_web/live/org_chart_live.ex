@@ -1,4 +1,8 @@
 defmodule FrontendChallengeWeb.DepChartLive do
+  @moduledoc """
+    This module renders a LiveView of a employees hierachy tree. 
+  """
+
   use Surface.LiveView
 
   alias FrontendChallengeWeb.Components.Chart

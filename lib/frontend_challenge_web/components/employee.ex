@@ -1,4 +1,9 @@
 defmodule FrontendChallengeWeb.Components.Employee do
+  
+  @moduledoc """
+    This module renders a stateful LiveComponent of an employee in a Hierachy Tree
+  """
+
   use Surface.LiveComponent
   alias FrontendChallengeWeb.Components.Separator
 
