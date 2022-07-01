@@ -10,7 +10,14 @@ defmodule FrontendChallenge.MixProject do
       compilers: [:gettext] ++ Mix.compilers() ++ [:surface],
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+      test_coverage: [tool: ExCoveralls],
+      preferred_cli_env: [
+        coveralls: :test,
+        "coveralls.detail": :test,
+        "coveralls.post": :test,
+        "coveralls.html": :test
+      ]
     ]
   end
 
@@ -46,7 +53,9 @@ defmodule FrontendChallenge.MixProject do
       {:gettext, "~> 0.18"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
-      {:surface, "~> 0.7.4"}
+      {:surface, "~> 0.7.4"},
+      {:excoveralls, "~> 0.10", only: :test},
+      {:credo, "~> 1.6"}
     ]
   end
 

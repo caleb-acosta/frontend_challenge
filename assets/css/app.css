@@ -119,6 +119,10 @@
   100% { opacity: 0; }
 }
 
-.is-hidden{
-  display: none
+.depth_block{
+  width: 40px;
+}
+
+.employee{
+  width: 400px;
 }

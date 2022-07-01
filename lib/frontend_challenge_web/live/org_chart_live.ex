@@ -1,12 +1,12 @@
 defmodule FrontendChallengeWeb.DepChartLive do
   use Surface.LiveView
 
-  alias FrontendChallengeWeb.Components.{Employee, Chart}
+  alias FrontendChallengeWeb.Components.Chart
 
   def render(assigns) do
     ~F"""
     <div>
-      <Chart id="chart"/>    
+      <Chart id="chart" />
     </div>
     """
   end
