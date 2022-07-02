@@ -28,30 +28,30 @@ defmodule FrontendChallengeWeb.Components.Employee do
           <button class="mx-1 my-0 button is-info" :on-click="toggle-allocation"><i class="fa-solid fa-dollar-sign" /></button>
           <button
             class="mx-1 my-0 button is-danger"
-            :on-click={"delete-employee", target: "#chart"}
+            :on-click={"delete-employee", target: "1"}
             :values={employee_id: assigns.id}
           ><i class="fa-solid fa-trash" /></button>
         </div>
-        <div class={"is-flex", "is-flex-direction-column", "is-hidden": @toggle_allocation}>
+        <div class={"is-flex", "is-flex-direction-column", "allocation-box", "is-hidden": @toggle_allocation}>
           <span>Warranted Allocation: ${@allocation}</span>
           {#if @type == :manager}
             <span>Monthly accumulated allocation: ${@total_allocation}</span>
           {/if}
         </div>
-        <div class={"is-flex", "p-2", "is-flex-direction-column", "is-hidden": @toggle_add}>
+        <div class={"is-flex", "p-2", "is-flex-direction-column", "add-box", "is-hidden": @toggle_add}>
           <span
             class="button is-success"
-            :on-click={"add-employee", target: "#chart"}
+            :on-click={"add-employee", target: "1"}
             :values={type: :manager, parent: assigns.id}
           >+ Manager</span>
           <span
             class="button is-success"
-            :on-click={"add-employee", target: "#chart"}
+            :on-click={"add-employee", target: "1"}
             :values={type: :developer, parent: assigns.id}
           >+ Developer</span>
           <span
             class="button is-success"
-            :on-click={"add-employee", target: "#chart"}
+            :on-click={"add-employee", target: "1"}
             :values={type: :tester, parent: assigns.id}
           >+ QA Tester</span>
         </div>

@@ -4,7 +4,7 @@ defmodule FrontendChallengeWeb.Components.Chart do
     This module renders a Chart of employees hierachy tree
   """  
 
-  use Surface.LiveView
+  use Surface.LiveComponent
   alias FrontendChallengeWeb.Components.Employee
   alias FrontendChallenge.Hierachy
 
