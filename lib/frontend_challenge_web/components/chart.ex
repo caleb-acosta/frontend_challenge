@@ -38,7 +38,6 @@ defmodule FrontendChallengeWeb.Components.Chart do
         str_to_int(values["parent"]),
         String.to_atom(values["type"])
       )
-
     total_allocation = Hierachy.calc_total(org_tree)
     {:noreply, assign(socket, org_tree: org_tree, total_allocation: total_allocation)}
   end

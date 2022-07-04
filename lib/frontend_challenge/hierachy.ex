@@ -28,7 +28,6 @@ defmodule FrontendChallenge.Hierachy do
 
   def add(hierachy, parent_id, type) do
     parent_index = get_employee_index(hierachy, parent_id)
-
     Map.replace(
       hierachy,
       :data,
@@ -36,7 +35,7 @@ defmodule FrontendChallenge.Hierachy do
         hierachy.data,
         parent_index,
         Map.update(
-          get_employee_by_id(hierachy, parent_index),
+          get_employee_by_id(hierachy, parent_id),
           :children,
           [],
           &[hierachy.current_id | &1]
@@ -85,7 +84,7 @@ defmodule FrontendChallenge.Hierachy do
       Enum.filter(d, &(&1.id not in to_delete))
     end)
     |> update_allocations()
-    |> order_hierachy()
+    #|> order_hierachy()
   end
 
   def get_employee_by_id(hierachy, id) do
