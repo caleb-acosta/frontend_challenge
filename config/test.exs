@@ -8,8 +8,7 @@ config :frontend_challenge, FrontendChallengeWeb.Endpoint,
   server: false
 
 # In test we don't send emails.
-config :frontend_challenge, FrontendChallenge.Mailer,
-  adapter: Swoosh.Adapters.Test
+config :frontend_challenge, FrontendChallenge.Mailer, adapter: Swoosh.Adapters.Test
 
 # Print only warnings and errors during test
 config :logger, level: :warn

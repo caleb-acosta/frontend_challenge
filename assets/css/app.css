@@ -118,3 +118,11 @@
   0% { opacity: 1; }
   100% { opacity: 0; }
 }
+
+.depth_block{
+  width: 40px;
+}
+
+.employee{
+  width: 400px;
+}
